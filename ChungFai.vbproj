@@ -1,0 +1,2122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{354C96F9-ADFE-4E8A-A1F9-FB21704B5576}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>ChungFai</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ChungFai.basMain</StartupObject>
+    <AssemblyMajorVersion>2</AssemblyMajorVersion>
+    <AssemblyMinorVersion>0</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>0</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>Nbase System Consultant</AssemblyCompanyName>
+    <StartWithIE>False</StartWithIE>
+    <ApplicationIcon>ChungFai.ico</ApplicationIcon>
+    <RootNamespace>ChungFai</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>ChungFai.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>ChungFai.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <Reference Include="AxInterop.TrueDBGrid60, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AxInterop.TrueDBGrid60.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20123.61287, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Program Files\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1TrueDBGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.TrueDBGrid60, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.TrueDBGrid60.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.XArrayDBObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.XArrayDBObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data">
+      <Name>Microsoft.VisualBasic.Compatibility.Data</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.VS">
+      <Name>Microsoft.VisualBasic.PowerPacks.VS</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="ADODB">
+      <Guid>{EF53050B-882E-4776-B643-EDA472E8E3F2}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="AT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>AT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>C001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="C001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>C002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="C002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>CAT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>CMP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COA001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>COA001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COA001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COA002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>COA002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COA002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADJ001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmADJ001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmADJ001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAP002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAP002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAP003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAP003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAP100.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAP100.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAP100.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAP101.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAP101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAP101.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL004.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL005.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL005.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL006.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL007.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL007.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL007.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL008.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL008.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL009.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL009.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL009.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPL010.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPL010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPL010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPR001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPR001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPR001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPR0011.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPR0011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPR0011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPR0012.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPR0012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPR0012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPS001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPS001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPS001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPS0011.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPS0011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPS0011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPV001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPV001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPV001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPV0011.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPV0011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPV0011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPW001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPW001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPW001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPW0011.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAPW0011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAPW0011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAR001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAR001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAR001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAR002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAR002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAR002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAR003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAR003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAR003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAR100.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAR100.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAR100.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAR101.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAR101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAR101.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL004.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL005.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL005.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL006.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL007.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL007.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL007.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL008.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL008.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL009.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL009.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL009.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL010.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL011.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARL012.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARL012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARL012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmARPE000.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmARPE000.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmARPE000.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAT002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmAT002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAT002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeKey.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmChangeKey.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeKey.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChgPwd.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmChgPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChgPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDAM001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmDAM001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDAM001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocAppendix.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmDocAppendix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocAppendix.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocRemark.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmDocRemark.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocRemark.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEXC001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmEXC001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEXC001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEXC002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmEXC002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEXC002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGL001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGL001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGL001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGL002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGL002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGL002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGLP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGLP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGLP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGLP002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGLP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGLP002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGLP003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGLP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGLP003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGLP004.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGLP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGLP004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGLP005.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGLP005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGLP005.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGLP006.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGLP006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGLP006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGRV001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmGRV001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGRV001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHH.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmHH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHHIM001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmHHIM001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHHIM001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHHIM0011.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmHHIM0011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHHIM0011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmICP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmICP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICP002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmICP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmICP002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICP003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmICP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmICP003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICP004.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmICP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmICP004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICP005.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmICP005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmICP005.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICP006.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmICP006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmICP006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ006.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ007.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ007.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ007.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ008.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ008.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ009.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ009.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ009.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ010.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ012.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINQ013.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINQ013.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINQ013.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINV001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmINV001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmINV001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIP0022.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmIP0022.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIP0022.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIT002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmIT002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIT002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmITM001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmITM001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmITM001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmITM002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmITM002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmITM002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmITMLST.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmITMLST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmITMLST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJOB002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmJOB002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJOB002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJOBMST.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmJOBMST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJOBMST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyInput.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmKeyInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeyInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmML002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmML002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmML002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMRP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmMRP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMRP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMRP002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmMRP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMRP002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPN001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmOPN001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPN001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPN002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmOPN002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPN002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPGR001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPGR001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPGR001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPGV001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPGV001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPGV001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPO001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPO001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPO001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPR002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPR002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPR002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintBar.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPrintBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintList.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPrintList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPT002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPT002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPT002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPURGE.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPURGE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPURGE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPYT002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmPYT002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPYT002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQTN002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmQTN002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQTN002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRMK002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmRMK002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRMK002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSAM001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSAM001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSAM001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSCT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSCT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSCT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSDN001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSDN001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSDN001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectComp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSelectComp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectComp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectWhs.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSelectWhs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectWhs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSHP002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSHP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSHP002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSIGN001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSIGN001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSIGN001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSIGN002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSIGN002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSIGN002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSKT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSKT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSKT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSLM002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSLM002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSLM002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSN001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSN001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSN001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSN002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSN002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSN002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSO001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSO001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSO001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOLOG.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOLOG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOLOG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP000.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP000.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP000.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP003.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP004.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP006.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP008.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP008.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP010.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP020.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOP030.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSOP030.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOP030.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecialPassword.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSpecialPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpecialPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTF002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSTF002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTF002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTKCNT.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmSTKCNT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTKCNT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTRF001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmTRF001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTRF001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUC001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmUC001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUC001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUOM002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmUOM002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUOM002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUSR002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmUSR002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUSR002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUSRRHT.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmUSRRHT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUSRRHT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVQ001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmVQ001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVQ001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWH002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmWH002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWH002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWS001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmWS001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWS001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>IP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>IT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IW001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>IW001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IW001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>M001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ML001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ML001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ML001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modChungFai.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modHH.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="N001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>N001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="N001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAcct.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NBAdo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NBFunc.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nbMain.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>nbMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nbMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBRptFunc.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NBvar.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PR001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>PR001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PR001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>PT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PYT001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>PYT001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PYT001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RGN001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>RGN001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RGN001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMK001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>RMK001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RMK001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareSearch.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ShareSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShareSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SHP001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>SHP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SHP001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SLM001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>SLM001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SLM001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STF001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>STF001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="STF001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>SYS001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SYS001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>SYS002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SYS002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terr001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Terr001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Terr001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UOM001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>UOM001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UOM001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USR001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>USR001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USR001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>V001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="V001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>V002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="V002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOU001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>VOU001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VOU001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOU002.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>VOU002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VOU002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WH001.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>WH001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WH001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="AT001.resX">
+      <DependentUpon>AT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C001.resX">
+      <DependentUpon>C001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C002.resX">
+      <DependentUpon>C002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAT001.resX">
+      <DependentUpon>CAT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMP001.resX">
+      <DependentUpon>CMP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COA001.resX">
+      <DependentUpon>COA001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COA002.resX">
+      <DependentUpon>COA002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADJ001.resX">
+      <DependentUpon>frmADJ001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAP001.resX">
+      <DependentUpon>frmAP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAP002.resX">
+      <DependentUpon>frmAP002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAP003.resX">
+      <DependentUpon>frmAP003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAP100.resX">
+      <DependentUpon>frmAP100.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAP101.resX">
+      <DependentUpon>frmAP101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL001.resX">
+      <DependentUpon>frmAPL001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL002.resX">
+      <DependentUpon>frmAPL002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL003.resX">
+      <DependentUpon>frmAPL003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL004.resX">
+      <DependentUpon>frmAPL004.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL005.resX">
+      <DependentUpon>frmAPL005.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL006.resX">
+      <DependentUpon>frmAPL006.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL007.resX">
+      <DependentUpon>frmAPL007.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL008.resX">
+      <DependentUpon>frmAPL008.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL009.resX">
+      <DependentUpon>frmAPL009.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPL010.resX">
+      <DependentUpon>frmAPL010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPP001.resX">
+      <DependentUpon>frmAPP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPR001.resX">
+      <DependentUpon>frmAPR001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPR0011.resX">
+      <DependentUpon>frmAPR0011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPR0012.resX">
+      <DependentUpon>frmAPR0012.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPS001.resX">
+      <DependentUpon>frmAPS001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPS0011.resX">
+      <DependentUpon>frmAPS0011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPV001.resX">
+      <DependentUpon>frmAPV001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPV0011.resX">
+      <DependentUpon>frmAPV0011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPW001.resX">
+      <DependentUpon>frmAPW001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPW0011.resX">
+      <DependentUpon>frmAPW0011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAR001.resX">
+      <DependentUpon>frmAR001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAR002.resX">
+      <DependentUpon>frmAR002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAR003.resX">
+      <DependentUpon>frmAR003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAR100.resX">
+      <DependentUpon>frmAR100.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAR101.resX">
+      <DependentUpon>frmAR101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL001.resX">
+      <DependentUpon>frmARL001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL002.resX">
+      <DependentUpon>frmARL002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL003.resX">
+      <DependentUpon>frmARL003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL004.resX">
+      <DependentUpon>frmARL004.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL005.resX">
+      <DependentUpon>frmARL005.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL006.resX">
+      <DependentUpon>frmARL006.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL007.resX">
+      <DependentUpon>frmARL007.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL008.resX">
+      <DependentUpon>frmARL008.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL009.resX">
+      <DependentUpon>frmARL009.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL010.resX">
+      <DependentUpon>frmARL010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL011.resX">
+      <DependentUpon>frmARL011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARL012.resX">
+      <DependentUpon>frmARL012.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmARPE000.resX">
+      <DependentUpon>frmARPE000.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAT002.resX">
+      <DependentUpon>frmAT002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeKey.resX">
+      <DependentUpon>frmChangeKey.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChgPwd.resX">
+      <DependentUpon>frmChgPwd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDAM001.resX">
+      <DependentUpon>frmDAM001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocAppendix.resX">
+      <DependentUpon>frmDocAppendix.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocRemark.resX">
+      <DependentUpon>frmDocRemark.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEXC001.resX">
+      <DependentUpon>frmEXC001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEXC002.resX">
+      <DependentUpon>frmEXC002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGL001.resX">
+      <DependentUpon>frmGL001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGL002.resX">
+      <DependentUpon>frmGL002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGLP001.resX">
+      <DependentUpon>frmGLP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGLP002.resX">
+      <DependentUpon>frmGLP002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGLP003.resX">
+      <DependentUpon>frmGLP003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGLP004.resX">
+      <DependentUpon>frmGLP004.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGLP005.resX">
+      <DependentUpon>frmGLP005.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGLP006.resX">
+      <DependentUpon>frmGLP006.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGRV001.resX">
+      <DependentUpon>frmGRV001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHH.resX">
+      <DependentUpon>frmHH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHHIM001.resX">
+      <DependentUpon>frmHHIM001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHHIM0011.resX">
+      <DependentUpon>frmHHIM0011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICP001.resX">
+      <DependentUpon>frmICP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICP002.resX">
+      <DependentUpon>frmICP002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICP003.resX">
+      <DependentUpon>frmICP003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICP004.resX">
+      <DependentUpon>frmICP004.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICP005.resX">
+      <DependentUpon>frmICP005.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICP006.resX">
+      <DependentUpon>frmICP006.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ001.resX">
+      <DependentUpon>frmINQ001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ003.resX">
+      <DependentUpon>frmINQ003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ006.resX">
+      <DependentUpon>frmINQ006.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ007.resX">
+      <DependentUpon>frmINQ007.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ008.resX">
+      <DependentUpon>frmINQ008.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ009.resX">
+      <DependentUpon>frmINQ009.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ010.resX">
+      <DependentUpon>frmINQ010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ012.resX">
+      <DependentUpon>frmINQ012.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINQ013.resX">
+      <DependentUpon>frmINQ013.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINV001.resX">
+      <DependentUpon>frmINV001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIP0022.resX">
+      <DependentUpon>frmIP0022.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIT002.resX">
+      <DependentUpon>frmIT002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmITM001.resX">
+      <DependentUpon>frmITM001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmITM002.resX">
+      <DependentUpon>frmITM002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmITMLST.resX">
+      <DependentUpon>frmITMLST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJOB002.resX">
+      <DependentUpon>frmJOB002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJOBMST.resX">
+      <DependentUpon>frmJOBMST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyInput.resX">
+      <DependentUpon>frmKeyInput.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resX">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmML002.resX">
+      <DependentUpon>frmML002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMRP001.resX">
+      <DependentUpon>frmMRP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMRP002.resX">
+      <DependentUpon>frmMRP002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPN001.resX">
+      <DependentUpon>frmOPN001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPN002.resX">
+      <DependentUpon>frmOPN002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPGR001.resX">
+      <DependentUpon>frmPGR001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPGV001.resX">
+      <DependentUpon>frmPGV001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPO001.resX">
+      <DependentUpon>frmPO001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPR002.resX">
+      <DependentUpon>frmPR002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrint.resX">
+      <DependentUpon>frmPrint.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintBar.resX">
+      <DependentUpon>frmPrintBar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintList.resX">
+      <DependentUpon>frmPrintList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPT002.resX">
+      <DependentUpon>frmPT002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPURGE.resX">
+      <DependentUpon>frmPURGE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPYT002.resX">
+      <DependentUpon>frmPYT002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQTN002.resX">
+      <DependentUpon>frmQTN002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRMK002.resX">
+      <DependentUpon>frmRMK002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSAM001.resX">
+      <DependentUpon>frmSAM001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSCT001.resX">
+      <DependentUpon>frmSCT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSDN001.resX">
+      <DependentUpon>frmSDN001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectComp.resX">
+      <DependentUpon>frmSelectComp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectWhs.resX">
+      <DependentUpon>frmSelectWhs.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSHP002.resX">
+      <DependentUpon>frmSHP002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSIGN001.resX">
+      <DependentUpon>frmSIGN001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSIGN002.resX">
+      <DependentUpon>frmSIGN002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSKT001.resX">
+      <DependentUpon>frmSKT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSLM002.resX">
+      <DependentUpon>frmSLM002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSN001.resX">
+      <DependentUpon>frmSN001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSN002.resX">
+      <DependentUpon>frmSN002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSO001.resX">
+      <DependentUpon>frmSO001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOLOG.resX">
+      <DependentUpon>frmSOLOG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP000.resX">
+      <DependentUpon>frmSOP000.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP003.resX">
+      <DependentUpon>frmSOP003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP004.resX">
+      <DependentUpon>frmSOP004.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP006.resX">
+      <DependentUpon>frmSOP006.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP008.resX">
+      <DependentUpon>frmSOP008.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP010.resX">
+      <DependentUpon>frmSOP010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP020.resX">
+      <DependentUpon>frmSOP020.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOP030.resX">
+      <DependentUpon>frmSOP030.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecialPassword.resX">
+      <DependentUpon>frmSpecialPassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTF002.resX">
+      <DependentUpon>frmSTF002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTKCNT.resX">
+      <DependentUpon>frmSTKCNT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTRF001.resX">
+      <DependentUpon>frmTRF001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUC001.resX">
+      <DependentUpon>frmUC001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUOM002.resX">
+      <DependentUpon>frmUOM002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUSR002.resX">
+      <DependentUpon>frmUSR002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUSRRHT.resX">
+      <DependentUpon>frmUSRRHT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVQ001.resX">
+      <DependentUpon>frmVQ001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWH002.resX">
+      <DependentUpon>frmWH002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWS001.resX">
+      <DependentUpon>frmWS001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IP001.resX">
+      <DependentUpon>IP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT001.resX">
+      <DependentUpon>IT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IW001.resX">
+      <DependentUpon>IW001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M001.resX">
+      <DependentUpon>M001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ML001.resX">
+      <DependentUpon>ML001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="N001.resX">
+      <DependentUpon>N001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nbMain.resX">
+      <DependentUpon>nbMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PR001.resX">
+      <DependentUpon>PR001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PT001.resX">
+      <DependentUpon>PT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PYT001.resX">
+      <DependentUpon>PYT001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RGN001.resX">
+      <DependentUpon>RGN001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMK001.resX">
+      <DependentUpon>RMK001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareSearch.resX">
+      <DependentUpon>ShareSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHP001.resX">
+      <DependentUpon>SHP001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SLM001.resX">
+      <DependentUpon>SLM001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STF001.resX">
+      <DependentUpon>STF001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS001.resX">
+      <DependentUpon>SYS001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS002.resX">
+      <DependentUpon>SYS002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terr001.resX">
+      <DependentUpon>Terr001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UOM001.resX">
+      <DependentUpon>UOM001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USR001.resX">
+      <DependentUpon>USR001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V001.resX">
+      <DependentUpon>V001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V002.resX">
+      <DependentUpon>V002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOU001.resX">
+      <DependentUpon>VOU001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOU002.resX">
+      <DependentUpon>VOU002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WH001.resX">
+      <DependentUpon>WH001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="ChungFai.ico" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="_UpgradeReport.htm">
+      <SubType>Preview</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
